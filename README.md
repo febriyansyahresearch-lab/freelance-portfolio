@@ -8,8 +8,8 @@ IT security leader (15+ yrs, banking) and Master’s student in Informatics Engi
 ## 💹 Stock ML
 - Simple stock signal script (buy/hold idea) using price history.
 
-## 📩 Contact
+📩 Contact
 
-Email: febriyansyah.research@gmail.com   
+Email: febriyansyah.research@gmail.com  
 WhatsApp: +62 851-5522-9569
 
