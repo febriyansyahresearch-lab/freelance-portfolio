@@ -1,0 +1,9 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "freelance-portfolio"
+version = "1.0.0"
+description = "Security & ML mini projects for freelance clients"
+requires-python = ">=3.10"
