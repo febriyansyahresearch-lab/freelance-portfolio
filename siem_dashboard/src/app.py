@@ -1,4 +1,5 @@
-from siem_dashboard.src.parser import parse_log, score_event, LOG_PATTERN
+import argparse
+import sys
 from siem_dashboard.src.report import analyze_logs, print_report
 
 SAMPLE_LOGS = [
@@ -12,8 +13,28 @@ SAMPLE_LOGS = [
 
 
 def main():
-    stats = analyze_logs(SAMPLE_LOGS)
+    parser = argparse.ArgumentParser(description="SIEM Log Analyzer & Reporter")
+    parser.add_argument("--file", help="Path to log file (one log per line)")
+    parser.add_argument("--verbose", action="store_true", help="Show all events")
+    args = parser.parse_args()
+
+    if args.file:
+        try:
+            with open(args.file) as f:
+                lines = f.readlines()
+        except FileNotFoundError:
+            print(f"Error: file '{args.file}' not found", file=sys.stderr)
+            sys.exit(1)
+    else:
+        lines = SAMPLE_LOGS
+
+    stats = analyze_logs(lines)
     print_report(stats)
+
+    if args.verbose:
+        print("\n=== All Events ===")
+        for line in lines:
+            print(line.strip())
 
 
 if __name__ == "__main__":

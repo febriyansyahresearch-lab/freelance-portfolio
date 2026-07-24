@@ -1,11 +1,22 @@
 import argparse
 import json
+import os
 import sys
-import urllib.request
 import urllib.error
+import urllib.request
 
 
 ABUSEIPDB_URL = "https://api.abuseipdb.com/api/v2/check"
+
+
+def get_api_key(key_arg: str | None) -> str:
+    if key_arg:
+        return key_arg
+    env_key = os.environ.get("ABUSEIPDB_API_KEY")
+    if env_key:
+        return env_key
+    print("Error: API key required via --api-key or ABUSEIPDB_API_KEY env var", file=sys.stderr)
+    sys.exit(1)
 
 
 def check_ip(ip_address: str, api_key: str, max_age: int = 90) -> dict:
@@ -45,11 +56,7 @@ def main():
     parser.add_argument("--json", action="store_true", help="Output raw JSON")
     args = parser.parse_args()
 
-    api_key = args.api_key
-    if not api_key:
-        print("Error: API key required via --api-key or ABUSEIPDB_API_KEY env var", file=sys.stderr)
-        sys.exit(1)
-
+    api_key = get_api_key(args.api_key)
     result = check_ip(args.ip, api_key, args.max_age)
 
     if args.json:

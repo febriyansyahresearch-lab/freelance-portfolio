@@ -16,5 +16,8 @@ joblib
 scikit-learn
 joblib
 
-# testing
+# testing & tooling
 pytest
+ruff
+pre-commit
+python-dotenv

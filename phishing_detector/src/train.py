@@ -24,6 +24,21 @@ SAMPLE_URLS = [
     ("https://www.amazon.com", 0),
     ("http://support-apple.xyz/help", 1),
     ("https://drive.google.com", 0),
+    ("https://www.facebook.com", 0),
+    ("http://verify-paypal.account-security.com", 1),
+    ("https://twitter.com", 0),
+    ("http://free-iphone.click/win.php", 1),
+    ("https://www.microsoft.com", 0),
+    ("http://bank-secure-login.xyz/auth", 1),
+    ("https://www.instagram.com", 0),
+    ("http://account-verify.xyz/reset", 1),
+    ("https://www.wikipedia.org", 0),
+    ("http://win-prize.click/claim", 1),
+    ("https://www.netflix.com", 0),
+    ("http://secure-update.xyz/install", 1),
+    ("https://www.reddit.com", 0),
+    ("http://tax-refund.xyz/claim", 1),
+    ("https://www.whatsapp.com", 0),
 ]
 
 
@@ -33,7 +48,7 @@ def train():
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)
 
-    model = RandomForestClassifier(n_estimators=50, random_state=42)
+    model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
     y_pred = model.predict(X_test)
