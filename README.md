@@ -1,5 +1,10 @@
 # Freelance Portfolio — Febriyansyah
 
+[![CI](https://github.com/febriyansyahresearch-lab/freelance-portfolio/actions/workflows/test.yml/badge.svg)](https://github.com/febriyansyahresearch-lab/freelance-portfolio/actions)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Tests](https://img.shields.io/badge/tests-24%20passed-brightgreen)](.)
+
 **Febriyansyah** — MTI, IT Security Leader (15+ yrs, Banking)
 
 Applied machine learning and cybersecurity engineering portfolio demonstrating MTI-level competency across fraud detection, threat intelligence, SIEM automation, vulnerability management, and quantitative finance.
