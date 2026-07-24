@@ -1,0 +1,2 @@
+# cyber-ml: no external dependencies (pure Python)
+# stock-ml: no external dependencies (pure Python)
