@@ -1,16 +1,32 @@
 # Freelance Portfolio – Febriyansyah
 
-IT security leader (15+ yrs, banking) and Master’s student in Informatics Engineering. Focused on ML for cybersecurity & stocks.
+IT security leader (15+ yrs, banking) and Master's student in Informatics Engineering. Focused on ML for cybersecurity & stocks.
 
-## 🔐 Cyber ML
-- Simple log analysis & threat scoring demo (SIEM / AbuseIPDB style).
+## Cyber ML
+- `log_analysis_example.py` — Simple log parsing & threat scoring
+- `abuseipdb_client.py` — AbuseIPDB API integration (check IP reputation)
+- `tests/` — Unit tests
 
-## 💹 Stock ML
-- Simple stock signal script (buy/hold idea) using price history.
+## Stock ML
+- `simple_stock_signal.py` — Simple stock signal (BUY/SELL/HOLD) based on price change
+- `yahoo_finance.py` — Real stock data via Yahoo Finance API
+- `tests/` — Unit tests
 
-📩 Contact
+## Setup
+```bash
+pip install -r requirements.txt
+```
 
-Email: febriyansyah.research@gmail.com 
+## Usage
+```bash
+# AbuseIPDB
+python -m cyber_ml.abuseipdb_client 8.8.8.8 --api-key YOUR_KEY
 
-WhatsApp: +62 851-5522-9569
+# Yahoo Finance
+python -m stock_ml.yahoo_finance AAPL --period 1mo
 
+# Run tests
+pytest
+```
+
+Contact: febriyansyah.research@gmail.com
