@@ -1,4 +1,20 @@
-# cyber-ml: no external dependencies (pure Python)
-# stock-ml: yfinance for real stock data
+# cyber_ml
+# stock_ml
 yfinance
+
+# fraud-detection
+scikit-learn
+fastapi
+uvicorn
+joblib
+
+# siem-dashboard
+
+# vulnerability-scanner
+
+# phishing-detector
+scikit-learn
+joblib
+
+# testing
 pytest
